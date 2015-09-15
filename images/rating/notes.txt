@@ -1,0 +1,53 @@
+What I want to do: Take a background image with transparency (images/bk.png), overlay another image with transparency (images/text.png) and then return the image, keeping transparency.
+
+First idea: load up background png, overlay foreground png, output.
+<?
+header('Content-type: image/png');
+$img = imagecreatefrompng('images/bk.png');
+$text = imagecreatefrompng('images/text.png');
+imagecopy($img,$text,30,32,0,0,93,65);
+
+
+if(!isset($_GET['T'])) { imagepng($img); }
+imagedestroy($img);
+?>
+Result: php treats the transparency of the background png as white and then puts the foreground image on top, returning an image with no transparency.
+
+
+Second idea: Create a png, set the background colour as transparency, then put the background png on, then the foreground png.
+<?
+header('Content-type: image/png');
+$img = imagecreatetruecolor(254,128);
+$bkcol = imagecolorallocatealpha($img,255,255,255,100);
+imagefill($img,0,0,$bkcol);
+imagecolortransparent($img,$bkcol);
+
+$bk = imagecreatefrompng('images/bk.png');
+imagecopy($img,$bk,0,0,0,0,254,128);
+$text = imagecreatefrompng('images/text.png');
+imagecopy($img,$text,30,32,0,0,93,65);
+
+imagepng($img);
+imagedestroy($img);
+?>
+Result: Horrible effect whereby transparency is removed and horrible odd black shadowy bits appear.
+
+
+Third idea: Create png, set a normal background colour, set that background colour as transparency and then put the background and foreground images on top of it.
+<?
+header('Content-type: image/png');
+$img = imagecreatetruecolor(254,128);
+$bkcol = imagecolorallocate($img,255,255,255);
+imagefill($img,0,0,$bkcol);
+imagecolortransparent($img,$bkcol);
+
+$bk = imagecreatefrompng('images/bk.png');
+imagecopy($img,$bk,0,0,0,0,254,128);
+$text = imagecreatefrompng('images/text.png');
+imagecopy($img,$text,30,32,0,0,93,65);
+
+
+if(!isset($_GET['T'])) { imagepng($img); }
+imagedestroy($img);
+?>
+Result: image returned with transparency and images applied, seems perfect... however, varied transparency still fails, it's all either fully opaque or fully transparent, no semi-transparent

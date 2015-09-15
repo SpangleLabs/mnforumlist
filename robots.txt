@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /upload_culture.php
+Disallow: /upload_flag.php
+Disallow: /upload_flag2.php
+Disallow: /rating_review.php
+

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Forumlist admin panel"
+require valid-user
+AuthUserFile "/home/drspangl/.htpasswds/public_html/Forumlist/admin/passwd"

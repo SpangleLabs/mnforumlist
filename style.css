@@ -1,0 +1,111 @@
+body {
+	background: #000000;
+	text-align: center;
+	font-family: verdana;
+	color: black;
+font-size: 90%;
+}
+
+
+#main {
+	margin: 0 auto;
+	width: 800px;
+	text-align: center;
+	background-image: url("images/core.png");
+	background-repeat: repeat-y;
+}
+h1 {
+font-family: calibri, arial, sans-serif;
+}
+h2 {
+font-family: calibri, arial, sans-serif;
+}
+h3 {
+font-family: calibri, arial, sans-serif;
+}
+
+#button {
+	position: absolute;
+	margin-left: 0px;
+	left: 0px;
+	top: 0px;
+	width: 50px;
+	height: 50px;
+}
+
+img {
+	border: 0px;
+}
+img.Flag {
+	border: 5px outset #FFFF00;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	width: 700px;
+	text-align: left;
+	border-width: 4px;
+	border-style: solid;
+	border-color: gray;
+}
+table.search {
+	border-width: 0px;
+	text-align: center;
+}
+td.top {
+	background-image: url('images/tabletop.png');
+	border-bottom: 2px;
+}
+td.Alive {
+	background-image: url('images/alive.png');
+}
+td.Dead {
+	background-image: url('images/dead.png');
+}
+
+#warning {
+	color: red;
+	background-color: black;
+}
+
+#info {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: left;
+}
+
+#CultureUpload {
+	text-align: center;
+}
+
+#visits {
+	font-size: 75%;
+}
+#indexvisits {
+	font-size: 100%;
+}
+.mod {
+	font-size: 70%;
+text-align: right;
+margin-top: 3px;
+margin-right: 20px;
+font-family: verdana;
+}
+hr {
+	border: 0;
+	height: 1px;
+	width: 95%;
+	color: #A8E61D;
+	background-color: #A8E61D;
+}
+
+A:hover {
+	background-color: #FFA500;
+	color: white;
+}
+
+A.image:hover {
+	background-color: transparent;
+}

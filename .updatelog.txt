@@ -1,0 +1,74 @@
+----0.0.0---02/12/2010----
+0.0.0 is defined as the current state.
+----0.0.1---03/12/2010----
+Background updates the language system
+ Added notes to function.lang.php
+ Made function.lang.php request text for all languages that lack text "lump" when text is not found for requested language
+ Changed language/Add/requestlist.php to add a link to language/Add/requestlist-cleanup.php
+ Added language/Add/requestlist-cleanup.php
+Database: Added Nations_tags_data and Nations_tags_tagged tables for category system
+----0.0.2---06/12/2010----
+Modified index.php, gave flag it's own column
+Modified upload_flag2.php, prevented it from crashing if the code takes over a second to run
+Created page_category.php, it lists all nations in a category
+Created admin/actions/action.addcategory1.php, an admin form to add a new category
+Created admin/actions/action.addcategory2.php, processor for the admin add category form
+Created admin/actions/function.addcategory.php, the function to actually add the new category to the database
+Created admin/actions/action.tagnation1.php, an admin form to add a nation to a category
+Created admin/actions/action.tagnation2.php, processor for the admin add nation to a category form
+Created admin/actions/function.tagnation.php, the function to actually add the nation to the category
+Created admin/actions/action.removetag1.php, an admin form to remove a nation from a category
+Created admin/actions/action.removetag2.php, processor for the admin remove nation from a category form
+Created admin/actions/function.removetag.php, the function to actually remove the nation from the category
+Modified page_category.php to allow selection of more than 1 category.
+----0.0.3---09/12/2010----
+Modified add_new2.php, removed question over whether website uses flash.
+Modified admin/actions/function.addnation.php, removed recording if websites use flash
+Modified admin/actions/action.addnation2.php, removed question over whether website uses flash.
+Modified admin/actions/action.addwebsite1.php, removed question over whether website uses flash.
+Modified admin/actions/action.addwebsite2.php, removed input over whether website uses flash.
+Modified admin/actions/function.addwebsite.php, removed recording whether website uses flash.
+----0.0.4---12/12/2010----
+Modified index.php, made PPD round to 3 decimal places.
+Modified page_category.php, made PPD round to 3 decimal places.
+Modified page_category.php, made translatable.
+Modified Language/add/requestlist.php, made it sort by Language then by text lump title.
+Modified Language/add/requestlist.php, made it so non latin characters are displayed correctly.
+Modified nation.php, removed the specification that only main wiki articles should be displayed.
+----0.0.5---13/12/2010----
+Created admin/actions/action.addwiki1.php, an admin form to add a new wiki.
+Created admin/actions/action.addwiki2.php, a page to process the data submitted in addwiki1.php
+Created admin/actions/function.addwiki.php, a page containing the function which actually adds the wiki to the database.
+Modified admin/actions/index.php, added a link to the new add wiki page.
+Modified request_mod.php, so that wiki data is shown correctly.
+Created admin/actions/action.addwikiarticle1.php, an admin form to add a new wiki article.
+Created admin/actions/action.addwikiarticle2.php, a page to process the data submitted in addwikiarticle1.php
+Created admin/actions/function.addwikiarticle.php, a page containing the function which actually adds the wiki article to the database.
+Modified admin/actions/index.php, added a link to the new add wiki article page.
+Modified admin/actions/addwikiarticle1.php, Added the Type of Places to wiki articles, for all Provinces, cities, etc
+Created language/Add/mostrequested.php, A page to list the most requested languages for the language system.
+Created language/Add/languagecodes.txt, A txt file containing all the languages against their ISO639-1 codes.
+Created language/Add/languagecodes.php, A file containing a function to turn an ISO639-1 code into the name of the language, using languagecodes.txt
+
+----Future modifications and/or features:----
+-Finish the wiki article system
+-Citizen count, see glowing red rectangle
+-Culture uploader upgrades
+--Textual upload
+--File type sorting
+--Better safety
+-Add nation upgrades
+--Check URL is valid
+--Javascript for website and forum numbers
+-Website screenshots
+-RSS feeds for nation?
+-Language dealt with by tags
+-More graphs
+-RSS feed needs finishing
+-Nation categories: Micras, etc.
+-Admin panel
+--Fix balenced actions
+--Make it able to create new tables.
+-Nation timelines http://microwiki.co.cc/index.php?title=List_of_Micronations_in_2010 that kinda thing but better
+-Email nation system
+-National relations, wars, alliances, etc
