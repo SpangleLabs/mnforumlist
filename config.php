@@ -1,13 +1,30 @@
 <?
-//include('../black.php');
 
+//Database host
 $db_host = "localhost";
-$db_user = "drspangl_FList";
-$db_pass = "cheddar";
-$db_name = "drspangl_ForumL";
-$db_pre = "Nations_";
-$db_pre2 = "Utilities_";
-$db_pref = $db_pre;
-$admin_email = "drspangle13@gmail.com";
 
+//Database username
+$db_user = "drspangl_FList";
+
+//Database password
+$db_pass = "------";
+
+//Database name
+$db_name = "drspangl_ForumL";
+
+//Database table prefix
+$db_pre = "Nations_";
+
+//Second database table prefix (?)
+$db_pre2 = "Utilities_";
+
+//Alias for database table prefix.
+$db_pref = $db_pre;
+
+//Email of administrator
+$admin_email = "forumlist@dr-spangle.com";
+
+
+//IMPORTANT: REMOVE THIS AFTER UPDATING CONFIG
+die();
 ?>
